@@ -33,7 +33,11 @@ export class ImageGalleryItem extends Component {
   }
 }
 
-ImageGalleryItem.propTypes = {
-  image: PropTypes.object,
-  onClick: PropTypes.func,
+ImageGalleryItem.protoTypes = {
+  image: PropTypes.shape({
+    tags: PropTypes.string.isRequired,
+    webformatURL: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    largeImageURL: PropTypes.string.isRequired,
+  }),
 };

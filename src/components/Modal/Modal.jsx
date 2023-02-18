@@ -5,12 +5,10 @@ import { ModalOverlay, ModalStyled } from './Styled';
 export class Modal extends Component {
   componentDidMount = () => {
     window.addEventListener('keydown', this.clickOnEsc);
-    window.addEventListener('click', this.clickOnBackDrop);
   };
 
   componentWillUnmount = () => {
     window.removeEventListener('keydown', this.clickOnEsc);
-    window.removeEventListener('click', this.clickOnBackDrop);
   };
   clickOnEsc = event => {
     if (event.code === 'Escape') {
